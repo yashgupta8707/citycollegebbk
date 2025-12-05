@@ -43,7 +43,7 @@ const Facilities = () => {
         'Practice tutorial sessions',
         'Supervised practical training'
       ],
-      details: 'Currently college has well equipped labs for D.El.Ed / BTC course. Students are encouraged to undertake practice tutorials to gain proficiency and precision in drawing inferences. Our laboratories provide students with the practical skills necessary to become effective educators.'
+      details: 'Currently college has well equipped labs for B.Sc. course. Students are encouraged to undertake practice tutorials to gain proficiency and precision in drawing inferences. Our laboratories provide students with the practical skills necessary to become effective educators.'
     },
     {
       icon: <Laptop size={48} />,

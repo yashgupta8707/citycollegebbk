@@ -18,8 +18,8 @@ const Home = () => {
     {
       image: '/hero1.jpg',
       title: 'Welcome to City College Barabanki',
-      subtitle: 'Empowering Future Teachers Through Quality Education',
-      description: 'Affiliated with Dr. Rajendra Prasad Educational Society, offering D.El.Ed/BTC courses with modern facilities and experienced faculty.',
+      subtitle: 'Excellence in Higher Education',
+      description: 'Affiliated with Dr. Rajendra Prasad Educational Society, offering quality education across diverse disciplines with modern facilities and experienced faculty.',
       buttons: (
         <>
           <Link to="/courses" className="btn-primary inline-flex items-center">
@@ -34,9 +34,9 @@ const Home = () => {
     },
     {
       image: '/hero2.jpg',
-      title: 'Shape Young Minds, Build the Future',
-      subtitle: 'Professional Teacher Training Programs',
-      description: 'Join our D.El.Ed and BTC programs designed to prepare you for a rewarding career in education.',
+      title: 'Shape Your Future, Build Your Dreams',
+      subtitle: 'Comprehensive Academic Programs',
+      description: 'Join our undergraduate and postgraduate programs designed to prepare you for a successful career.',
       buttons: (
         <>
           <Link to="/courses" className="btn-primary inline-flex items-center">
@@ -51,9 +51,9 @@ const Home = () => {
     },
     {
       image: '/hero3.jpg',
-      title: 'Excellence in Teacher Education',
+      title: 'Excellence in Higher Education',
       subtitle: '20+ Years of Educational Excellence',
-      description: 'NCTE recognized institution with experienced faculty, modern infrastructure, and 100% placement assistance.',
+      description: 'UGC recognized institution with experienced faculty, modern infrastructure, and comprehensive placement assistance.',
       buttons: (
         <>
           <Link to="/about" className="btn-primary inline-flex items-center">
@@ -149,15 +149,14 @@ const Home = () => {
                 Building Tomorrow's Educators
               </h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Literacy and Education are strong indicators of development in a society. It is an 
-                established fact that the quality of education is influenced by the quality of teachers, 
-                their commitment and motivation for the teaching profession, their understanding about 
-                children's learning, social expectations, classrooms practices and pedagogical alternatives.
+                Education is the cornerstone of development in any society. At City College Barabanki,
+                we believe in providing quality education that shapes future leaders, professionals,
+                and responsible citizens who contribute meaningfully to society.
               </p>
               <p className="text-gray-700 mb-6 leading-relaxed">
-                Dr. Rajendra Prasad Educational Society was established in the year 2000. We registered 
-                our society in the year 2000. Our society was established to give education for D.El.Ed / 
-                BTC course and other professional courses.
+                Dr. Rajendra Prasad Educational Society was established in the year 2000 with a vision
+                to provide accessible, affordable, and quality higher education. We offer a wide range of
+                academic programs across various disciplines, fostering holistic development of our students.
               </p>
               <Link to="/about" className="text-primary-600 font-semibold hover:text-primary-700 inline-flex items-center">
                 Learn More About Us
@@ -244,13 +243,13 @@ const Home = () => {
             <div className="card p-8">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                City College Barabanki emphasizes the all-round development of its students. It aims
-                at producing not only good professionals, teachers, but also good and worthy citizens
-                of a great country, aiding in its overall progress and development.
+                City College Barabanki emphasizes the all-round development of its students. We aim
+                to produce not only good professionals but also responsible and worthy citizens
+                who contribute to the progress and development of our nation.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                It endeavours to treat every student as an individual, to recognize their potential
-                and to ensure that they receive the best preparation and training for achieving their
+                We treat every student as an individual, recognize their unique potential,
+                and ensure they receive the best education and training to achieve their
                 career ambitions and life goals.
               </p>
             </div>
@@ -278,7 +277,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-8 md:p-12 text-white text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Start Your Teaching Career?
+              Ready to Start Your Academic Journey?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Join City College Barabanki and become part of a community dedicated to excellence in education

@@ -122,7 +122,7 @@ const EnquiryForm = () => {
         {/* Course Selection */}
         <div>
           <label htmlFor="course" className="block text-xs font-medium text-gray-700 mb-1">
-            Course *
+            Program *
           </label>
           <select
             id="course"
@@ -132,9 +132,11 @@ const EnquiryForm = () => {
             required
             className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
           >
-            <option value="">Select course</option>
-            <option value="d-el-ed">D.El.Ed</option>
-            <option value="btc">BTC</option>
+            <option value="">Select program</option>
+            <option value="undergraduate">Undergraduate Programs</option>
+            <option value="postgraduate">Postgraduate Programs</option>
+            <option value="diploma">Diploma Programs</option>
+            <option value="other">Other Programs</option>
           </select>
         </div>
 

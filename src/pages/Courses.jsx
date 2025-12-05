@@ -1,301 +1,386 @@
 import { Link } from 'react-router-dom';
-import { 
-  GraduationCap, 
-  Clock, 
-  BookOpen, 
+import {
+  GraduationCap,
+  Clock,
+  BookOpen,
   CheckCircle,
   Users,
-  Calendar,
+  Download,
   Award,
-  FileText
+  Microscope,
+  Leaf,
+  Calculator
 } from 'lucide-react';
 
 const Courses = () => {
-  const courseHighlights = [
-    'NCTE Approved Course',
-    'Two Year Duration',
-    'Practical Training Included',
-    'Experienced Faculty',
-    'Regular Assessments',
-    'Industry Exposure',
-    'Placement Assistance',
-    'State Government Affiliated'
-  ];
-
-  const curriculum = [
+  const programs = [
     {
-      semester: 'First Year',
+      title: 'Bachelor of Science in Agriculture (B.Sc. Agriculture)',
+      duration: '4 Years',
+      description: 'Professional degree program focused on agricultural sciences, modern farming techniques, and rural development',
+      icon: <Leaf size={48} className="text-green-600" />,
       subjects: [
-        'Childhood and Growing Up',
-        'Contemporary Indian Society',
-        'Education in Contemporary India',
-        'Learning and Teaching',
-        'Language across the Curriculum',
-        'Understanding Disciplines and Subjects',
-        'Pedagogy of Environmental Studies',
-        'Pedagogy of Hindi/English'
-      ]
+        'Agronomy',
+        'Soil Science',
+        'Plant Pathology',
+        'Agricultural Economics',
+        'Horticulture',
+        'Animal Husbandry',
+        'Agricultural Engineering',
+        'Crop Production',
+        'Plant Breeding',
+        'Agricultural Extension'
+      ],
+      eligibility: 'Passed 10+2 or equivalent examination with Science subjects (Physics, Chemistry, Biology/Agriculture)',
+      careerOptions: [
+        'Agricultural Officer',
+        'Farm Manager',
+        'Agricultural Consultant',
+        'Soil Scientist',
+        'Horticulturist',
+        'Research & Development',
+        'Banking (Agricultural Sector)',
+        'Agribusiness Management',
+        'Food Processing Industry',
+        'Government Agricultural Services'
+      ],
+      highlights: [
+        'Practical farm training',
+        'Modern agricultural techniques',
+        'Government job opportunities',
+        'Entrepreneurship opportunities',
+        'Rural development focus',
+        'Industry exposure'
+      ],
+      calendarPdf: '/bsc-ag.pdf'
     },
     {
-      semester: 'Second Year',
+      title: 'Bachelor of Science (B.Sc.) - Biology',
+      duration: '3 Years',
+      description: 'Comprehensive undergraduate program in biological sciences with specialization in Botany, Zoology, and Chemistry',
+      icon: <Microscope size={48} className="text-primary-600" />,
       subjects: [
-        'Knowledge and Curriculum',
-        'Assessment for Learning',
-        'Creating an Inclusive School',
-        'Gender, School and Society',
-        'Pedagogy of Mathematics',
-        'Pedagogy of Science',
-        'Pedagogy of Social Science',
-        'Practice Teaching and School Internship'
-      ]
+        'Botany',
+        'Zoology',
+        'Chemistry',
+        'Biochemistry',
+        'Microbiology',
+        'Genetics',
+        'Ecology',
+        'Molecular Biology'
+      ],
+      eligibility: 'Passed 10+2 or equivalent examination with Science subjects (Physics, Chemistry, Biology)',
+      careerOptions: [
+        'Research Scientist',
+        'Laboratory Technician',
+        'Quality Control Analyst',
+        'Environmental Consultant',
+        'Biotechnology Professional',
+        'Healthcare & Pharmaceuticals',
+        'Teaching & Academia',
+        'Higher Studies (M.Sc., Ph.D.)',
+        'Wildlife Conservation',
+        'Forensic Science'
+      ],
+      highlights: [
+        'Well-equipped laboratories',
+        'Experienced faculty',
+        'Research opportunities',
+        'Industry exposure',
+        'Hands-on practical training',
+        'Career guidance'
+      ],
+      calendarPdf: '/bsc.pdf'
+    },
+    {
+      title: 'Bachelor of Science (B.Sc.) - Mathematics',
+      duration: '3 Years',
+      description: 'Rigorous program in mathematics with focus on analytical thinking, problem-solving, and computational skills',
+      icon: <Calculator size={48} className="text-blue-600" />,
+      subjects: [
+        'Algebra',
+        'Calculus',
+        'Real Analysis',
+        'Linear Algebra',
+        'Differential Equations',
+        'Numerical Methods',
+        'Statistics',
+        'Computer Programming',
+        'Mathematical Modeling',
+        'Discrete Mathematics'
+      ],
+      eligibility: 'Passed 10+2 or equivalent examination with Science subjects (Physics, Chemistry, Mathematics)',
+      careerOptions: [
+        'Data Analyst',
+        'Statistician',
+        'Actuary',
+        'Operations Research Analyst',
+        'Teaching & Academia',
+        'Banking & Finance',
+        'Software Development',
+        'Research & Development',
+        'Higher Studies (M.Sc., Ph.D.)',
+        'Government Services'
+      ],
+      highlights: [
+        'Strong mathematical foundation',
+        'Computational skills development',
+        'Problem-solving focus',
+        'Industry-relevant curriculum',
+        'Career versatility',
+        'Research opportunities'
+      ],
+      calendarPdf: '/bsc-math.pdf'
     }
   ];
 
-  const eligibility = [
-    'Graduation in any discipline',
-    'Minimum 50% marks in graduation (45% for reserved categories)',
-    'Age limit as per state government norms',
-    'Valid entrance test score (if applicable)'
-  ];
-
-  const careerOptions = [
-    'Primary School Teacher',
-    'Elementary School Teacher',
-    'Educational Consultant',
-    'Curriculum Designer',
-    'Educational Content Writer',
-    'Private Tutor',
-    'NGO Education Officer',
-    'Government School Teacher (through TET)'
+  const whyChooseUs = [
+    {
+      icon: <BookOpen size={32} />,
+      title: 'UGC Approved',
+      description: 'Programs recognized by UGC and affiliated with Dr. Ram Manohar Lohia Avadh University'
+    },
+    {
+      icon: <Users size={32} />,
+      title: 'Expert Faculty',
+      description: 'Highly qualified and experienced faculty members with industry expertise'
+    },
+    {
+      icon: <Award size={32} />,
+      title: 'Quality Infrastructure',
+      description: 'Modern laboratories, library, and facilities for comprehensive learning'
+    },
+    {
+      icon: <CheckCircle size={32} />,
+      title: 'Placement Support',
+      description: 'Career guidance and placement assistance for better opportunities'
+    }
   ];
 
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-16 md:py-24">
+      <section className="bg-linear-to-r from-primary-600 to-primary-800 text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <div className="flex items-center mb-4">
               <GraduationCap size={48} className="mr-4" />
-              <h1 className="text-4xl md:text-5xl font-bold">Our Courses</h1>
+              <h1 className="text-4xl md:text-5xl font-bold">Our Programs</h1>
             </div>
-            <p className="text-xl md:text-2xl">
-              Quality Teacher Education Programs for Aspiring Educators
+            <p className="text-xl md:text-2xl mb-6">
+              Quality Education in Science, Agriculture & Mathematics
             </p>
+            <Link to="/admissions" className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-block">
+              Apply Now
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Main Course Section */}
+      {/* Programs Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="card p-8 md:p-12">
-              <div className="flex flex-wrap items-center justify-between mb-8">
-                <div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-                    D.El.Ed / BTC
-                  </h2>
-                  <p className="text-xl text-gray-600">
-                    Diploma in Elementary Education / Basic Training Certificate
-                  </p>
-                </div>
-                <div className="mt-4 md:mt-0">
-                  <Link to="/contact" className="btn-primary">
-                    Apply Now
-                  </Link>
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="flex items-start p-4 bg-primary-50 rounded-lg">
-                  <Clock size={24} className="text-primary-600 mr-3 flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-1">Duration</h4>
-                    <p className="text-gray-600">2 Years (4 Semesters)</p>
-                  </div>
-                </div>
-                <div className="flex items-start p-4 bg-primary-50 rounded-lg">
-                  <Users size={24} className="text-primary-600 mr-3 flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-1">Eligibility</h4>
-                    <p className="text-gray-600">Graduation in any discipline</p>
-                  </div>
-                </div>
-                <div className="flex items-start p-4 bg-primary-50 rounded-lg">
-                  <Award size={24} className="text-primary-600 mr-3 flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-1">Recognition</h4>
-                    <p className="text-gray-600">NCTE Approved</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="prose max-w-none">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Course Overview</h3>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  The D.El.Ed (Diploma in Elementary Education), formerly known as BTC (Basic Training 
-                  Certificate), is a professional teacher training course designed to prepare candidates 
-                  for elementary level teaching (Classes I to VIII). This comprehensive two-year program 
-                  combines theoretical knowledge with practical teaching experience to develop skilled 
-                  and confident educators.
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  Currently, the college has well-equipped labs for D.El.Ed / BTC courses. Students are 
-                  encouraged to undertake practice tutorials to gain proficiency and precision in drawing 
-                  inferences. The course curriculum is designed to meet the evolving needs of the education 
-                  sector and prepare teachers who can create engaging and effective learning environments.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Course Highlights */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">
-            Course Highlights
-          </h2>
-          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-4">
-            {courseHighlights.map((highlight, index) => (
-              <div key={index} className="flex items-center p-4 bg-white rounded-lg shadow">
-                <CheckCircle size={24} className="text-green-600 mr-3 flex-shrink-0" />
-                <span className="text-gray-700 font-medium">{highlight}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Curriculum */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">
-            Curriculum Structure
-          </h2>
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-            {curriculum.map((year, index) => (
-              <div key={index} className="card p-6">
-                <div className="flex items-center mb-6">
-                  <BookOpen size={32} className="text-primary-600 mr-3" />
-                  <h3 className="text-2xl font-bold text-gray-800">{year.semester}</h3>
-                </div>
-                <ul className="space-y-3">
-                  {year.subjects.map((subject, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <span className="text-primary-600 mr-3 mt-1">•</span>
-                      <span className="text-gray-700">{subject}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="max-w-3xl mx-auto mt-8 p-6 bg-primary-50 rounded-lg">
-            <p className="text-gray-700 leading-relaxed">
-              <strong>Note:</strong> The curriculum includes both theoretical and practical components. 
-              Students will undergo extensive practice teaching sessions and a mandatory school internship 
-              program to gain hands-on experience in real classroom settings.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Eligibility Criteria */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
-              Eligibility Criteria
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              Undergraduate Programs
             </h2>
-            <div className="card p-8">
-              <div className="grid md:grid-cols-2 gap-6">
-                {eligibility.map((criteria, index) => (
-                  <div key={index} className="flex items-start">
-                    <CheckCircle size={24} className="text-primary-600 mr-3 flex-shrink-0 mt-1" />
-                    <p className="text-gray-700">{criteria}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <p className="text-gray-600 text-sm">
-                  <strong>Important:</strong> Eligibility criteria may vary based on state government 
-                  regulations. Please contact our admission office for the most current requirements.
-                </p>
-              </div>
-            </div>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              City College Barabanki offers three comprehensive undergraduate programs designed to prepare students for successful careers in their chosen fields
+            </p>
           </div>
-        </div>
-      </section>
 
-      {/* Career Opportunities */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">
-            Career Opportunities
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              {careerOptions.map((career, index) => (
-                <div key={index} className="card p-6 hover:transform hover:scale-105">
-                  <div className="flex items-start">
-                    <Award size={24} className="text-primary-600 mr-3 flex-shrink-0 mt-1" />
-                    <div>
-                      <h4 className="text-lg font-semibold text-gray-800">{career}</h4>
+          <div className="space-y-12 max-w-6xl mx-auto">
+            {programs.map((program, index) => (
+              <div key={index} className="card p-8 md:p-10 hover:shadow-2xl transition-all duration-300">
+                <div className="grid md:grid-cols-[120px_1fr] gap-6 mb-8">
+                  <div className="flex justify-center md:justify-start">
+                    {program.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-gray-800 mb-2">
+                      {program.title}
+                    </h3>
+                    <div className="flex items-center text-primary-600 mb-4">
+                      <Clock size={18} className="mr-2" />
+                      <span className="font-semibold">{program.duration}</span>
                     </div>
+                    <p className="text-gray-700 leading-relaxed">
+                      {program.description}
+                    </p>
                   </div>
                 </div>
-              ))}
-            </div>
-            <div className="bg-primary-50 p-6 rounded-lg">
-              <p className="text-gray-700 leading-relaxed mb-4">
-                After completing D.El.Ed/BTC, graduates are eligible to apply for the Teacher Eligibility 
-                Test (TET) conducted by the state government. Clearing TET opens doors to permanent teaching 
-                positions in government schools across the state.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                Our placement cell actively assists students in finding suitable teaching positions in 
-                both government and private educational institutions.
-              </p>
+
+                {/* Subjects */}
+                <div className="mb-6">
+                  <h4 className="text-xl font-bold text-gray-800 mb-4">Core Subjects</h4>
+                  <div className="flex flex-wrap gap-3">
+                    {program.subjects.map((subject, idx) => (
+                      <span
+                        key={idx}
+                        className="px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium"
+                      >
+                        {subject}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Eligibility */}
+                <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+                  <h4 className="text-lg font-bold text-gray-800 mb-2">Eligibility Criteria</h4>
+                  <p className="text-gray-700">{program.eligibility}</p>
+                </div>
+
+                {/* Career Options */}
+                <div className="mb-6">
+                  <h4 className="text-xl font-bold text-gray-800 mb-4">Career Opportunities</h4>
+                  <div className="grid md:grid-cols-2 gap-3">
+                    {program.careerOptions.map((career, idx) => (
+                      <div key={idx} className="flex items-start">
+                        <CheckCircle size={20} className="text-green-600 mr-2 shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{career}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Program Highlights */}
+                <div className="mb-6">
+                  <h4 className="text-xl font-bold text-gray-800 mb-4">Program Highlights</h4>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {program.highlights.map((highlight, idx) => (
+                      <div key={idx} className="flex items-center p-3 bg-primary-50 rounded-lg">
+                        <CheckCircle size={18} className="text-primary-600 mr-2 shrink-0" />
+                        <span className="text-gray-700 text-sm font-medium">{highlight}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Academic Calendar Download */}
+                <div className="pt-6 border-t border-gray-200">
+                  <a
+                    href={program.calendarPdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center bg-primary-600 text-white hover:bg-primary-700 font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
+                  >
+                    <Download size={20} className="mr-2" />
+                    Download Academic Calendar
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              Why Choose City College Barabanki?
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {whyChooseUs.map((feature, index) => (
+              <div key={index} className="card p-6 text-center hover:shadow-xl transition-all duration-300">
+                <div className="text-primary-600 flex justify-center mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Admission Information */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="card p-8 md:p-12 bg-linear-to-r from-primary-50 to-blue-50">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+                Admission Process
+              </h2>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center mr-4 shrink-0 font-bold">
+                    1
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-1">Check Eligibility</h4>
+                    <p className="text-gray-700 text-sm">Ensure you meet the eligibility criteria for your chosen program</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center mr-4 shrink-0 font-bold">
+                    2
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-1">Submit Application</h4>
+                    <p className="text-gray-700 text-sm">Fill out the admission form with required documents</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center mr-4 shrink-0 font-bold">
+                    3
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-1">Document Verification</h4>
+                    <p className="text-gray-700 text-sm">Attend document verification at the college office</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center mr-4 shrink-0 font-bold">
+                    4
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-1">Fee Payment</h4>
+                    <p className="text-gray-700 text-sm">Pay the admission fee to confirm your seat</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <Link
+                  to="/admissions"
+                  className="inline-block bg-primary-600 text-white hover:bg-primary-700 font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  View Detailed Admission Guidelines
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Admission Process */}
-      <section className="py-16 bg-gradient-to-r from-primary-600 to-primary-800 text-white">
+      {/* CTA Section */}
+      <section className="py-16 bg-linear-to-r from-primary-600 to-primary-800 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Admission Process
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Start Your Journey?
             </h2>
-            <div className="grid md:grid-cols-4 gap-6 mb-8">
-              <div className="bg-white bg-opacity-10 p-6 rounded-lg">
-                <div className="text-4xl font-bold mb-2">1</div>
-                <FileText size={32} className="mx-auto mb-3" />
-                <p className="font-semibold">Fill Application</p>
-              </div>
-              <div className="bg-white bg-opacity-10 p-6 rounded-lg">
-                <div className="text-4xl font-bold mb-2">2</div>
-                <Users size={32} className="mx-auto mb-3" />
-                <p className="font-semibold">Document Verification</p>
-              </div>
-              <div className="bg-white bg-opacity-10 p-6 rounded-lg">
-                <div className="text-4xl font-bold mb-2">3</div>
-                <CheckCircle size={32} className="mx-auto mb-3" />
-                <p className="font-semibold">Admission Confirmation</p>
-              </div>
-              <div className="bg-white bg-opacity-10 p-6 rounded-lg">
-                <div className="text-4xl font-bold mb-2">4</div>
-                <Calendar size={32} className="mx-auto mb-3" />
-                <p className="font-semibold">Join Classes</p>
-              </div>
+            <p className="text-xl mb-8">
+              Join City College Barabanki and build a successful career in Science, Agriculture, or Mathematics
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link to="/admissions" className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+                Apply Now
+              </Link>
+              <Link to="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+                Contact Us
+              </Link>
             </div>
-            <Link to="/contact" className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-block">
-              Start Your Application
-            </Link>
           </div>
         </div>
       </section>

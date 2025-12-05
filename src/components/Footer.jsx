@@ -12,9 +12,9 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-lg font-bold mb-4">About City College</h3>
             <p className="text-sm leading-relaxed mb-4">
-              City College Barabanki is committed to providing quality education through 
-              Dr. Rajendra Prasad Educational Society, offering D.El.Ed/BTC courses with 
-              excellent facilities and experienced faculty.
+              City College Barabanki, established in 2020 under Dr. Rajendra Prasad
+              Educational Society, offers quality undergraduate programs in Agriculture,
+              Biology, and Mathematics with excellent facilities and experienced faculty.
             </p>
             <div className="flex space-x-3">
               <a 
@@ -63,23 +63,19 @@ const Footer = () => {
 
           {/* Courses */}
           <div>
-            <h3 className="text-white text-lg font-bold mb-4">Our Courses</h3>
+            <h3 className="text-white text-lg font-bold mb-4">Our Programs</h3>
             <ul className="space-y-2 text-sm">
               <li className="flex items-start">
                 <span className="text-primary-400 mr-2">•</span>
-                <span>D.El.Ed (Diploma in Elementary Education)</span>
+                <Link to="/courses" className="hover:text-primary-400 transition">B.Sc. Agriculture (4 Years)</Link>
               </li>
               <li className="flex items-start">
                 <span className="text-primary-400 mr-2">•</span>
-                <span>BTC (Basic Training Certificate)</span>
+                <Link to="/courses" className="hover:text-primary-400 transition">B.Sc. Biology (3 Years)</Link>
               </li>
               <li className="flex items-start">
                 <span className="text-primary-400 mr-2">•</span>
-                <span>Duration: 2 Years</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary-400 mr-2">•</span>
-                <span>Eligibility: Graduation</span>
+                <Link to="/courses" className="hover:text-primary-400 transition">B.Sc. Mathematics (3 Years)</Link>
               </li>
             </ul>
           </div>
