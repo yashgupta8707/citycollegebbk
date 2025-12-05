@@ -64,7 +64,7 @@ const Navbar = () => {
               />
               <div className="hidden lg:block">
                 <h1 className="text-xl font-bold text-primary-700">CITY COLLEGE BARABANKI</h1>
-                <p className="text-xs text-gray-600">Through: Dr. Rajendra Prasad Educational Society</p>
+                <p className="text-xs text-gray-600">Part Of Dr. Rajendra Prasad Educational Society</p>
               </div>
             </Link>
 

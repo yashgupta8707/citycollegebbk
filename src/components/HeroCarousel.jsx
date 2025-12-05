@@ -73,7 +73,7 @@ const HeroCarousel = ({ slides }) => {
       ))}
 
       {/* Navigation Arrows */}
-      <button
+      {/* <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-3 rounded-full transition-all duration-300 z-10"
         aria-label="Previous slide"
@@ -86,7 +86,7 @@ const HeroCarousel = ({ slides }) => {
         aria-label="Next slide"
       >
         <ChevronRight size={24} />
-      </button>
+      </button> */}
 
       {/* Dots Navigation */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
