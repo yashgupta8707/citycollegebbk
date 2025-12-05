@@ -120,7 +120,7 @@ const Navbar = () => {
               </a>
             </div>
             <div className="text-sm">
-              Regd. Office: MS-101 Sec-D, Aliganj Lucknow
+              Address: Lakshbar Bajaha, Pratapganj, Barabanki.
             </div>
           </div>
         </div>
