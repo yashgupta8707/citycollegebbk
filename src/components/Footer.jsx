@@ -84,13 +84,13 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-lg font-bold mb-4">Contact Us</h3>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-start">
+              {/* <li className="flex items-start">
                 <MapPin size={18} className="mr-3 mt-1 text-primary-400 flex-shrink-0" />
                 <div>
                   <p className="font-semibold text-white mb-1">Regd. Office:</p>
                   <p>MS-101 Sec-D, Aliganj Lucknow</p>
                 </div>
-              </li>
+              </li> */}
               <li className="flex items-start">
                 <MapPin size={18} className="mr-3 mt-1 text-primary-400 flex-shrink-0" />
                 <div>

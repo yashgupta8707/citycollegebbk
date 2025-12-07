@@ -43,14 +43,14 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    {
-      icon: <MapPin size={24} />,
-      title: 'Registered Office',
-      details: [
-        'MS-101 Sec-D, Aliganj',
-        'Lucknow, Uttar Pradesh'
-      ]
-    },
+    // {
+    //   icon: <MapPin size={24} />,
+    //   title: 'Registered Office',
+    //   details: [
+    //     'MS-101 Sec-D, Aliganj',
+    //     'Lucknow, Uttar Pradesh'
+    //   ]
+    // },
     {
       icon: <MapPin size={24} />,
       title: 'College Campus',

@@ -20,6 +20,8 @@ const Search = () => {
     { title: 'IQAC', path: '/iqac', keywords: 'iqac quality assurance naac accreditation aqar' },
     { title: 'Statutes & Ordinances', path: '/statutes', keywords: 'statutes ordinances regulations rules policies governance' },
     { title: 'Admissions', path: '/admissions', keywords: 'admissions admission fee structure eligibility apply enrollment' },
+    { title: 'Admission Process & Guidelines', path: '/admission-process', keywords: 'admission process guidelines online form entrance examination merit counselling' },
+    { title: 'Fee Refund Policy', path: '/fee-refund-policy', keywords: 'fee refund policy payment charges no refund' },
     { title: 'Chancellor', path: '/chancellor', keywords: 'chancellor administration leadership' },
     { title: 'Pro Chancellor', path: '/pro-chancellor', keywords: 'pro chancellor vice administration leadership' },
     { title: 'Registrar', path: '/registrar', keywords: 'registrar administration records documentation' },

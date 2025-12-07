@@ -23,6 +23,30 @@ const Navbar = () => {
       ]
     },
     {
+      name: 'ADMINISTRATION',
+      dropdown: [
+        { name: 'Chancellor', path: 'https://www.rmlau.ac.in/New/chancellor.aspx', external: true },
+        { name: 'Pro Chancellor', path: 'https://www.rmlau.ac.in/New/vicechancellor.aspx', external: true },
+        { name: 'Registrar', path: 'https://www.rmlau.ac.in/New/registrar.aspx', external: true },
+        { name: 'Finance Officer', path: 'https://www.rmlau.ac.in/New/financeofficer.aspx', external: true },
+        { name: 'Controller of Examination', path: 'https://www.rmlau.ac.in/New/ControllerofExaminaton.aspx', external: true },
+        { name: 'Chief Vigilance Officer', path: 'https://www.rmlau.ac.in/New/DeansofFaculties.aspx', external: true },
+        { name: 'Ombudsperson', path: '/ombudsperson' },
+        { name: 'Executive Council', path: '/executive-council' },
+        { name: 'Internal Complaint Committee', path: '/internal-complaint-committee' },
+        { name: 'Academic Leadership', path: 'https://www.rmlau.ac.in/New/DeansofFaculties.aspx', external: true },
+      ]
+    },
+    {
+      name: 'COMMITTEE',
+      dropdown: [
+        { name: 'Sexual Harassment Committee', path: '/committee/sexual-harassment' },
+        { name: 'Internal Complaint Committee (ICC)', path: '/committee/icc' },
+        { name: 'Students Grievance Redressal Committee', path: '/committee/grievance-redressal' },
+        { name: 'Anti Ragging Committee', path: '/committee/anti-ragging' },
+      ]
+    },
+    {
       name: 'ACADEMICS',
       dropdown: [
         { name: 'Programs', path: '/courses' },
@@ -36,25 +60,9 @@ const Navbar = () => {
     {
       name: 'ADMISSIONS',
       dropdown: [
-        { name: 'Admission Process', path: '/admissions' },
-        { name: 'Fee Structure', path: '/admissions#fee' },
-        { name: 'Eligibility', path: '/admissions#eligibility' },
-        { name: 'Important Dates', path: '/admissions#dates' },
-      ]
-    },
-    {
-      name: 'ADMINISTRATION',
-      dropdown: [
-        { name: 'Chancellor', path: 'https://www.rmlau.ac.in/New/chancellor.aspx', external: true },
-        { name: 'Pro Chancellor', path: 'https://www.rmlau.ac.in/New/vicechancellor.aspx', external: true },
-        { name: 'Registrar', path: 'https://www.rmlau.ac.in/New/registrar.aspx', external: true },
-        { name: 'Finance Officer', path: 'https://www.rmlau.ac.in/New/financeofficer.aspx', external: true },
-        { name: 'Controller of Examination', path: 'https://www.rmlau.ac.in/New/ControllerofExaminaton.aspx', external: true },
-        { name: 'Chief Vigilance Officer', path: 'https://www.rmlau.ac.in/New/DeansofFaculties.aspx', external: true },
-        { name: 'Ombudsperson', path: '/ombudsperson' },
-        { name: 'Executive Council', path: '/executive-council' },
-        { name: 'Internal Complaint Committee', path: '/internal-complaint-committee' },
-        { name: 'Academic Leadership', path: 'https://www.rmlau.ac.in/New/DeansofFaculties.aspx', external: true },
+        { name: 'Admission Process & Guidelines', path: '/admission-process' },
+        { name: 'Fee Refund Policy', path: '/fee-refund-policy' },
+        { name: 'Prospectus', path: '/#', external: true },
       ]
     },
     { name: 'FACILITIES', path: '/facilities' },
