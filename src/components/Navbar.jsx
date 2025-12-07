@@ -65,7 +65,13 @@ const Navbar = () => {
         { name: 'Prospectus', path: '/#', external: true },
       ]
     },
-    { name: 'FACILITIES', path: '/facilities' },
+    {
+      name: 'FACILITIES',
+      dropdown: [
+        { name: 'Facilities', path: '/facilities' },
+        { name: 'Central Facilities (Gallery)', path: '/gallery' },
+      ]
+    },
     { name: 'FACULTY', path: '/faculty' },
     {
       name: 'RESEARCH',

@@ -28,6 +28,7 @@ import SexualHarassment from './pages/committee/SexualHarassment';
 import ICC from './pages/committee/ICC';
 import GrievanceRedressal from './pages/committee/GrievanceRedressal';
 import AntiRagging from './pages/committee/AntiRagging';
+import Gallery from './pages/Gallery';
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
             <Route path="/executive-council" element={<ExecutiveCouncil />} />
             <Route path="/internal-complaint-committee" element={<InternalComplaintCommittee />} />
             <Route path="/facilities" element={<Facilities />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/faculty" element={<Faculty />} />
             <Route path="/research" element={<Research />} />
             <Route path="/contact" element={<Contact />} />
