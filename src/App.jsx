@@ -29,6 +29,7 @@ import ICC from './pages/committee/ICC';
 import GrievanceRedressal from './pages/committee/GrievanceRedressal';
 import AntiRagging from './pages/committee/AntiRagging';
 import Gallery from './pages/Gallery';
+import Acts from './pages/Acts';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/director-message" element={<DirectorMessage />} />
             <Route path="/vision-mission" element={<VisionMission />} />
+            <Route path="/acts" element={<Acts />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/academic-calendar" element={<AcademicCalendar />} />
             <Route path="/departments" element={<Departments />} />

@@ -1,10 +1,10 @@
-import { useState, useRef } from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { Menu, X, Search, Phone, Mail, ChevronDown } from 'lucide-react';
+import { useState, useRef } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Menu, X, Search, Phone, Mail, ChevronDown } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [showSearch, setShowSearch] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const navigate = useNavigate();
@@ -13,75 +13,110 @@ const Navbar = () => {
   const hoverTimeoutRef = useRef(null);
 
   const navLinks = [
-    { name: 'HOME', path: '/' },
+    { name: "HOME", path: "/" },
     {
-      name: 'ABOUT',
+      name: "ABOUT",
       dropdown: [
-        { name: 'About Us', path: '/about' },
-        { name: "Director's Message", path: '/director-message' },
-        { name: 'Vision & Mission', path: '/vision-mission' },
-      ]
+        { name: "About Us", path: "/about" },
+        { name: "Director's Message", path: "/director-message" },
+        { name: "Principal's Message", path: "/#" },
+        { name: "Vision & Mission", path: "/vision-mission" },
+        { name: "ACTS", path: "/acts" },
+      ],
     },
     {
-      name: 'ADMINISTRATION',
+      name: "ADMINISTRATION",
       dropdown: [
-        { name: 'Chancellor', path: 'https://www.rmlau.ac.in/New/chancellor.aspx', external: true },
-        { name: 'Pro Chancellor', path: 'https://www.rmlau.ac.in/New/vicechancellor.aspx', external: true },
-        { name: 'Registrar', path: 'https://www.rmlau.ac.in/New/registrar.aspx', external: true },
-        { name: 'Finance Officer', path: 'https://www.rmlau.ac.in/New/financeofficer.aspx', external: true },
-        { name: 'Controller of Examination', path: 'https://www.rmlau.ac.in/New/ControllerofExaminaton.aspx', external: true },
-        { name: 'Chief Vigilance Officer', path: 'https://www.rmlau.ac.in/New/DeansofFaculties.aspx', external: true },
-        { name: 'Ombudsperson', path: '/ombudsperson' },
-        { name: 'Executive Council', path: '/executive-council' },
-        { name: 'Internal Complaint Committee', path: '/internal-complaint-committee' },
-        { name: 'Academic Leadership', path: 'https://www.rmlau.ac.in/New/DeansofFaculties.aspx', external: true },
-      ]
+        {
+          name: "Chancellor",
+          path: "https://www.rmlau.ac.in/New/chancellor.aspx",
+          external: true,
+        },
+        {
+          name: "Pro Chancellor",
+          path: "https://www.rmlau.ac.in/New/vicechancellor.aspx",
+          external: true,
+        },
+        {
+          name: "Registrar",
+          path: "https://www.rmlau.ac.in/New/registrar.aspx",
+          external: true,
+        },
+        {
+          name: "Finance Officer",
+          path: "https://www.rmlau.ac.in/New/financeofficer.aspx",
+          external: true,
+        },
+        {
+          name: "Controller of Examination",
+          path: "https://www.rmlau.ac.in/New/ControllerofExaminaton.aspx",
+          external: true,
+        },
+        {
+          name: "Chief Vigilance Officer",
+          path: "https://www.rmlau.ac.in/New/DeansofFaculties.aspx",
+          external: true,
+        },
+        { name: "Ombudsperson", path: "/ombudsperson" },
+        { name: "Executive Council", path: "/executive-council" },
+        {
+          name: "Internal Complaint Committee",
+          path: "/internal-complaint-committee",
+        },
+        {
+          name: "Academic Leadership",
+          path: "https://www.rmlau.ac.in/New/DeansofFaculties.aspx",
+          external: true,
+        },
+      ],
     },
     {
-      name: 'COMMITTEE',
+      name: "COMMITTEE",
       dropdown: [
-        { name: 'Sexual Harassment Committee', path: '/committee/sexual-harassment' },
-        { name: 'Internal Complaint Committee (ICC)', path: '/committee/icc' },
-        { name: 'Students Grievance Redressal Committee', path: '/committee/grievance-redressal' },
-        { name: 'Anti Ragging Committee', path: '/committee/anti-ragging' },
-      ]
+        {
+          name: "Sexual Harassment Committee",
+          path: "/committee/sexual-harassment",
+        },
+        { name: "Internal Complaint Committee (ICC)", path: "/committee/icc" },
+        {
+          name: "Students Grievance Redressal Committee",
+          path: "/committee/grievance-redressal",
+        },
+        { name: "Anti Ragging Committee", path: "/committee/anti-ragging" },
+      ],
     },
     {
-      name: 'ACADEMICS',
+      name: "ACADEMICS",
       dropdown: [
-        { name: 'Programs', path: '/courses' },
-        { name: 'Academic Calendar', path: '/academic-calendar' },
-        { name: 'Departments', path: '/departments' },
-        { name: 'Library', path: '/facilities' },
-        { name: 'IQAC', path: '/iqac' },
-        { name: 'Statutes & Ordinances', path: '/statutes' },
-      ]
+        { name: "Programs", path: "/courses" },
+        { name: "Academic Calendar", path: "/academic-calendar" },
+        { name: "Departments", path: "/departments" },
+        { name: "Library", path: "/facilities" },
+        { name: "IQAC", path: "/iqac" },
+        { name: "Statutes & Ordinances", path: "/statutes" },
+      ],
     },
     {
-      name: 'ADMISSIONS',
+      name: "ADMISSIONS",
       dropdown: [
-        { name: 'Admission Process & Guidelines', path: '/admission-process' },
-        { name: 'Fee Refund Policy', path: '/fee-refund-policy' },
-        { name: 'Prospectus', path: '/#', external: true },
-      ]
+        { name: "Admission Process & Guidelines", path: "/admission-process" },
+        { name: "Fee Refund Policy", path: "/fee-refund-policy" },
+        { name: "Prospectus", path: "/#", external: true },
+      ],
     },
     {
-      name: 'FACILITIES',
-      dropdown: [
-        { name: 'Facilities', path: '/facilities' },
-        { name: 'Central Facilities (Gallery)', path: '/gallery' },
-      ]
+        name: "Facilities", path: "/facilities"
     },
-    { name: 'FACULTY', path: '/faculty' },
+    { name: "FACULTY", path: "/faculty" },
     {
-      name: 'RESEARCH',
+      name: "RESEARCH",
       dropdown: [
-        { name: 'R&D Cell', path: '/research' },
-        { name: 'Incubation Centre', path: '/research#incubation' },
-        { name: 'Publications', path: '/research#publications' },
-      ]
+        { name: "R&D Cell", path: "/research" },
+        { name: "Incubation Centre", path: "/research#incubation" },
+        { name: "Central Facilities", path: "/gallery" },
+      ],
     },
-    { name: 'CONTACT', path: '/contact' },
+    { name: "CONTACT", path: "/contact" },
   ];
 
   const handleDropdownToggle = (name) => {
@@ -106,7 +141,7 @@ const Navbar = () => {
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery)}`;
-      setSearchQuery('');
+      setSearchQuery("");
       setShowSearch(false);
     }
   };
@@ -212,8 +247,8 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       `px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-md ${
                         isActive
-                          ? 'text-primary-600 bg-primary-50'
-                          : 'text-gray-700 hover:text-primary-600 hover:bg-primary-50'
+                          ? "text-primary-600 bg-primary-50"
+                          : "text-gray-700 hover:text-primary-600 hover:bg-primary-50"
                       }`
                     }
                   >
@@ -285,7 +320,7 @@ const Navbar = () => {
                       <ChevronDown
                         size={16}
                         className={`transition-transform ${
-                          openDropdown === link.name ? 'rotate-180' : ''
+                          openDropdown === link.name ? "rotate-180" : ""
                         }`}
                       />
                     </button>
@@ -331,8 +366,8 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       `block px-4 py-3 text-base font-semibold rounded-md mb-1 transition ${
                         isActive
-                          ? 'text-primary-600 bg-primary-50'
-                          : 'text-gray-700 hover:text-primary-600 hover:bg-primary-50'
+                          ? "text-primary-600 bg-primary-50"
+                          : "text-gray-700 hover:text-primary-600 hover:bg-primary-50"
                       }`
                     }
                   >

@@ -34,10 +34,23 @@ const AdmissionProcess = () => {
     }
   ];
 
+  const feeStructure = [
+    {
+      course: 'BSC AG (4-Year)',
+      duration: '4 Years',
+      fees: '₹6,000'
+    },
+    {
+      course: 'BSC (Zoology, Math, Physics, Botany, Chemistry)',
+      duration: '3 Years',
+      fees: '₹3,000'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-linear-to-r from-primary-600 to-primary-800 text-white py-16">
+      <div className="bg-gradient-to-r from-primary-700 to-primary-900 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Admission Process & Guidelines</h1>
           <p className="text-xl text-primary-100">Your pathway to joining City College Barabanki</p>
@@ -58,7 +71,7 @@ const AdmissionProcess = () => {
                   </div>
                   <div className="grow">
                     <div className="flex items-center gap-3 mb-2">
-                      <span className="text-primary-600 font-bold text-xl">Step {index + 1}</span>
+                      <span className="text-primary-600 font-bold text-xl">{index + 1}.</span>
                       <h3 className="text-xl font-bold text-gray-800">{step.title}</h3>
                     </div>
                     <p className="text-gray-700 leading-relaxed">{step.description}</p>
@@ -69,27 +82,49 @@ const AdmissionProcess = () => {
           </div>
 
           {/* Admission Fees Guidelines Section */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">Admission Fees Guidelines</h2>
 
-            <div className="space-y-4 text-gray-700">
-              <p className="leading-relaxed">
+            <div className="space-y-6">
+              <p className="text-gray-700 leading-relaxed">
                 Specific details regarding admission fees are typically provided on the university's official website
                 or during the application process. Fees may vary based on the course and specific requirements,
                 including tuition and additional charges.
               </p>
 
-              <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-lg mt-6">
+              <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-lg">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="text-yellow-600 shrink-0 mt-1" size={24} />
                   <div>
-                    <p className="font-semibold text-yellow-800 mb-2">Important Note:</p>
+                    <p className="font-semibold text-yellow-800 mb-2">Note:</p>
                     <p className="text-yellow-900">
                       Always refer to the official university guidelines for the most accurate and updated information
                       regarding fee structures and admission requirements.
                     </p>
                   </div>
                 </div>
+              </div>
+
+              {/* Fee Structure Table */}
+              <div className="overflow-x-auto mt-6">
+                <table className="w-full border-collapse bg-white shadow-md rounded-lg overflow-hidden">
+                  <thead>
+                    <tr className="bg-primary-600 text-white">
+                      <th className="py-4 px-6 text-left font-bold">Course</th>
+                      <th className="py-4 px-6 text-left font-bold">Duration</th>
+                      <th className="py-4 px-6 text-left font-bold">Fees (Per Semester)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {feeStructure.map((item, index) => (
+                      <tr key={index} className={`${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'} border-b border-gray-200`}>
+                        <td className="py-4 px-6 text-gray-800">{item.course}</td>
+                        <td className="py-4 px-6 text-gray-700">{item.duration}</td>
+                        <td className="py-4 px-6 text-gray-800 font-semibold">{item.fees}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
